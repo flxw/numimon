@@ -80,7 +80,7 @@ if len(sys.argv) < 2:
 
 # fork the process here
 t_base = time.time()
-p = subprocess.Popen(sys.argv[1:])
+p = subprocess.Popen(sys.argv[1:], stdout=sys.stderr)
 
 # continuously collect NUMA data
 numamon_lines = []
